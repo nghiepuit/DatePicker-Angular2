@@ -31,7 +31,7 @@ export class DatePickerDirective implements ControlValueAccessor {
     });
   }
 
-  public onChange: any = (_) => { /*Empty*/ }
+  public onChange: any = () => { /*Empty*/ }
   public onTouched: any = () => { /*Empty*/ }
 
   get value(): any {
