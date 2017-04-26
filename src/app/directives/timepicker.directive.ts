@@ -22,7 +22,8 @@ export class TimePickerDirective implements ControlValueAccessor {
 
 	constructor(private el: ElementRef) {
 		$(this.el.nativeElement).timepicker({
-			showMeridian: false
+			showMeridian: false,
+			defaultTime: '0:00'
 		}).on('keyup', (e) => {
 			this.onChange(e.target.value);
 		}).on('change', (e) => {

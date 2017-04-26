@@ -24,10 +24,17 @@ export class DatePickerDirective implements ControlValueAccessor {
     $(this.el.nativeElement).datepicker({
       changeMonth: true,
       changeYear: true,
-      dateFormat: 'dd/mm/yy'
+      dateFormat: 'dd/mm/yy',
+      autoclose: true,
+      templates: {
+        leftArrow: '<i class="fa fa-long-arrow-left">&laquo;</i>',
+        rightArrow: '<i class="fa fa-long-arrow-right">&raquo;</i>'
+      },
+      todayHighlight: true
     }).on('change', (e) => {
       this.onChange(e.target.value);
-      $('.datepicker').hide();
+    }).on('blur', (e) => {
+      this.onChange(e.target.value);
     });
   }
 
