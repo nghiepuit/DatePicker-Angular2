@@ -1,11 +1,24 @@
-<div class="row" style="margin: 200px 400px">
+<div class="row" style="margin: 200px 400px 0 400px">
     <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-        <div class='input-group' style="cursor: pointer;">
-            <input type="text" class="form-control" readonly date-picker [(ngModel)]="date" style="cursor: pointer; background: white" />
-            <span class="input-group-addon">
-        		<span class="glyphicon glyphicon-calendar"></span>
-            </span>
+        <div class="form-group">
+            <div class='input-group' style="cursor: pointer;">
+                <input type="text" class="form-control" readonly date-picker [(ngModel)]="date" style="cursor: pointer; background: white" />
+                <span class="input-group-addon">
+                <span class="glyphicon glyphicon-calendar"></span>
+                </span>
+            </div>
         </div>
-        Result : {{ date }}
+        Date : {{ date }}
+    </div>
+</div>
+<div class="row" style="margin: 50px 400px 400px 400px">
+    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+        <div class="form-group">
+            <div class="input-group bootstrap-timepicker timepicker">
+                <input id="timepicker" type="text" class="form-control input-small" time-picker [(ngModel)]="value">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-time"></i></span>
+            </div>
+        </div>
+        Time : {{ value }}
     </div>
 </div>

@@ -6,11 +6,13 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import * as $ from 'jquery';
 import { DatePickerDirective } from './directives/datepicker.directive';
+import { TimePickerDirective } from './directives/timepicker.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DatePickerDirective
+    DatePickerDirective,
+    TimePickerDirective
   ],
   imports: [
     BrowserModule,
